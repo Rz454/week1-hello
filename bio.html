@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minimalist Biography</title>
+    <style>
+        /* Constraint: Using only plain selectors and simple properties */
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: sans-serif;
+        }
+
+        body {
+            background-color: #e8e8e8;
+            padding: 20px;
+        }
+
+        /* --- Main Container: Fluid Width and Centered --- */
+        #card-container {
+            max-width: 600px; /* Instead of fixed 800px, use max-width for better fit on small screens */
+            margin: 40px auto;
+            background-color: #ffffff;
+            border: 1px solid #c0c0c0;
+            box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+            border-radius: 6px;
+        }
+
+        /* --- Header Section --- */
+        #header {
+            background-color: #444;
+            color: #fff;
+            padding: 25px 20px;
+            text-align: center;
+            border-top-left-radius: 6px;
+            border-top-right-radius: 6px;
+        }
+        
+        #header h1 {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 3px;
+        }
+        
+        #header p {
+            font-size: 14px;
+            color: #ccc;
+        }
+        
+        /* --- Content Section (All Stacked) --- */
+        #main-content {
+            padding: 20px;
+        }
+        
+        /* Photo and Contact Info (First Stacked Block) */
+        .photo-and-info {
+            padding: 0 0 20px 0;
+            text-align: center;
+            border-bottom: 1px dashed #ddd;
+            margin-bottom: 20px;
+        }
+
+        .photo-and-info img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            border: 2px solid #999;
+            margin-bottom: 15px;
+            display: block; /* Make sure it can be centered with margin: auto */
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .photo-and-info p {
+            font-size: 14px;
+            margin-bottom: 4px;
+            color: #555;
+        }
+
+        /* All Content Sections (About, Skills, Links) */
+        .section-title {
+            font-size: 18px;
+            font-weight: bold;
+            color: #333;
+            border-bottom: 1px solid #777;
+            padding-bottom: 3px;
+            margin-top: 25px; 
+            margin-bottom: 10px;
+        }
+        
+        .section-content p {
+            font-size: 14px;
+            line-height: 1.5;
+            margin-bottom: 10px;
+            color: #444;
+        }
+
+        .section-content ul {
+            list-style: square;
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
+
+        .section-content li {
+            font-size: 14px;
+            color: #444;
+            margin-bottom: 4px;
+        }
+        
+        /* Reset top margin for the very first section title */
+        .section-content .section-title:first-of-type {
+            margin-top: 0;
+        }
+        
+    </style>
+</head>
+<body>
+
+    <div id="card-container">
+        
+        <!-- Header (Name and Role) -->
+        <div id="header">
+            <h1>JANE DOE</h1>
+            <p>Student • Web Beginner</p>
+        </div>
+
+        <!-- Main Content (All Stacked) -->
+        <div id="main-content">
+            
+            <!-- Photo and Quick Info/Contact (Top-Stacked) -->
+            <div class="photo-and-info">
+                <img 
+                    src="https://placehold.co/100x100/444/fff?text=Photo" 
+                    alt="Profile Picture"
+                    onerror="this.onerror=null; this.src='https://placehold.co/100x100/cccccc/333333?text=User';"
+                >
+                <p><strong>Email:</strong> jane.doe@school.edu</p>
+                <p><strong>Location:</strong> Springfield, IL</p>
+            </div>
+            
+            <!-- Content Sections (Stacked below info) -->
+            <div class="section-content">
+                
+                <!-- About Section -->
+                <h2 class="section-title">About Me</h2>
+                <p>
+                    I am learning how to structure web pages using HTML and style them with foundational CSS techniques, focusing on simple, readable layouts. My current goal is to master basic positioning and block-level styling.
+                </p>
+
+                <!-- Skills Section -->
+                <h2 class="section-title">Skills</h2>
+                <ul>
+                    <li>HTML (Structure)</li>
+                    <li>CSS (Basic Layout & Styling)</li>
+                    <li>Text Formatting</li>
+                    <li>Problem Solving</li>
+                </ul>
+
+                <!-- Links Section -->
+                <h2 class="section-title">Contact / Links</h2>
+                <ul>
+                    <li><a href="#" style="color:#007bff; text-decoration:none;">GitHub Profile</a></li>
+                    <li><a href="#" style="color:#007bff; text-decoration:none;">Personal Website</a></li>
+                </ul>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+</html>
